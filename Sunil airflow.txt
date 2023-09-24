@@ -1,0 +1,560 @@
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sun Sep 24 10:52:34 2023 from 13.239.158.5
+[ec2-user@ip-172-31-27-44 ~]$ yum install python3
+Error: This command has to be run with superuser privileges (under the root user on most systems).
+[ec2-user@ip-172-31-27-44 ~]$ sudo su
+[root@ip-172-31-27-44 ec2-user]# mkfs
+mkfs: no device specified
+Try 'mkfs --help' for more information.
+[root@ip-172-31-27-44 ec2-user]# du
+4       ./.ssh
+20      .
+[root@ip-172-31-27-44 ec2-user]# ls
+[root@ip-172-31-27-44 ec2-user]# touch.gsynergy.txt
+bash: touch.gsynergy.txt: command not found
+[root@ip-172-31-27-44 ec2-user]# ls
+[root@ip-172-31-27-44 ec2-user]# df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+devtmpfs            4096       0      4096   0% /dev
+tmpfs             486092       0    486092   0% /dev/shm
+tmpfs             194440    2876    191564   2% /run
+/dev/xvda1       8310764 1922324   6388440  24% /
+tmpfs             486092       4    486088   1% /tmp
+/dev/xvda128       10202    1306      8896  13% /boot/efi
+tmpfs              97216       0     97216   0% /run/user/1000
+[root@ip-172-31-27-44 ec2-user]# pwds
+bash: pwds: command not found
+[root@ip-172-31-27-44 ec2-user]# pwd
+/home/ec2-user
+[root@ip-172-31-27-44 ec2-user]# cd
+[root@ip-172-31-27-44 ~]# mkdir
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+[root@ip-172-31-27-44 ~]# yum install python3
+Last metadata expiration check: 0:50:27 ago on Sun Sep 24 10:52:35 2023.
+Package python3-3.9.16-1.amzn2023.0.6.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@ip-172-31-27-44 ~]# ls
+airflow  airflow-env
+[root@ip-172-31-27-44 ~]# python --version
+bash: python: command not found
+[root@ip-172-31-27-44 ~]# python3 -m venv airflow-env
+sour[root@ip-172-31-27-44 ~]# source airflow 
+bash: source: airflow: is a directory
+[root@ip-172-31-27-44 ~]# source airflow-env/bin/activate
+(airflow-env) [root@ip-172-31-27-44 ~]# pip install apache-airflow
+Requirement already satisfied: apache-airflow in ./airflow-env/lib/python3.9/site-packages (2.7.1)
+Requirement already satisfied: asgiref in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.7.2)
+Requirement already satisfied: termcolor>=1.1.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.3.0)
+Requirement already satisfied: rich-argparse>=1.0.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.3.0)
+Requirement already satisfied: flask-caching>=1.5.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.0.2)
+Requirement already satisfied: itsdangerous>=2.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.1.2)
+Requirement already satisfied: typing-extensions>=4.0.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (4.8.0)
+Requirement already satisfied: mdit-py-plugins>=0.3.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.4.0)
+Requirement already satisfied: dill>=0.2.2 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.3.7)
+Requirement already satisfied: markdown>=3.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.4.4)
+Requirement already satisfied: graphviz>=0.12 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.20.1)
+Requirement already satisfied: opentelemetry-exporter-otlp in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.20.0)
+Requirement already satisfied: opentelemetry-api>=1.15.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.20.0)
+Requirement already satisfied: alembic<2.0,>=1.6.3 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.12.0)
+Requirement already satisfied: pluggy>=1.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.3.0)
+Requirement already satisfied: pathspec>=0.9.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.11.2)
+Requirement already satisfied: tabulate>=0.7.5 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.9.0)
+Requirement already satisfied: colorlog<5.0,>=4.0.2 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (4.8.0)
+Requirement already satisfied: pygments>=2.0.1 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.16.1)
+Requirement already satisfied: cron-descriptor>=1.2.24 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.4.0)
+Requirement already satisfied: deprecated>=1.2.13 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.2.14)
+Requirement already satisfied: sqlalchemy<2.0,>=1.4.24 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.4.49)
+Requirement already satisfied: packaging>=14.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (23.1)
+Requirement already satisfied: unicodecsv>=0.14.1 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.14.1)
+Requirement already satisfied: rich>=12.4.4 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (13.5.3)
+Requirement already satisfied: pyjwt>=2.0.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.8.0)
+Requirement already satisfied: sqlalchemy-jsonfield>=1.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.0.1.post0)
+Requirement already satisfied: cattrs>=22.1.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (23.1.2)
+Requirement already satisfied: werkzeug>=2.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.2.3)
+Requirement already satisfied: flask-session>=0.4.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.5.0)
+Requirement already satisfied: flask-appbuilder==4.3.6 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (4.3.6)
+Requirement already satisfied: pydantic>=1.10.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.3.0)
+Requirement already satisfied: connexion[flask]>=2.10.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.14.2)
+Requirement already satisfied: httpx in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.25.0)
+Requirement already satisfied: pendulum>=2.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.1.2)
+Requirement already satisfied: apache-airflow-providers-imap in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.3.2)
+Requirement already satisfied: google-re2>=1.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.1)
+Requirement already satisfied: psutil>=4.2.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (5.9.5)
+Requirement already satisfied: apache-airflow-providers-common-sql in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.7.2)
+Requirement already satisfied: marshmallow-oneofschema>=2.0.1 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.0.1)
+Requirement already satisfied: setproctitle>=1.1.8 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.3.2)
+Requirement already satisfied: jinja2>=3.0.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.1.2)
+Requirement already satisfied: flask<2.3,>=2.2 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.2.5)
+Requirement already satisfied: lockfile>=0.12.2 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.12.2)
+Requirement already satisfied: markdown-it-py>=2.1.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.0.0)
+Requirement already satisfied: cryptography>=0.9.3 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (41.0.4)
+Requirement already satisfied: python-dateutil>=2.3 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.8.2)
+Requirement already satisfied: python-nvd3>=0.15.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.15.0)
+Requirement already satisfied: jsonschema>=4.18.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (4.19.1)
+Requirement already satisfied: croniter>=0.3.17 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.4.1)
+Requirement already satisfied: attrs>=22.1.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (23.1.0)
+Requirement already satisfied: tenacity!=8.2.0,>=6.2.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (8.2.3)
+Requirement already satisfied: blinker in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.6.2)
+Requirement already satisfied: linkify-it-py>=2.0.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.0.2)
+Requirement already satisfied: gunicorn>=20.1.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (21.2.0)
+Requirement already satisfied: rfc3339-validator>=0.1.4 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.1.4)
+Requirement already satisfied: flask-login>=0.6.2 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (0.6.2)
+Requirement already satisfied: apache-airflow-providers-ftp in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.5.2)
+Requirement already satisfied: argcomplete>=1.10 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.1.2)
+Requirement already satisfied: python-daemon>=3.0.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.0.1)
+Requirement already satisfied: configupdater>=3.1.1 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.1.1)
+Requirement already satisfied: lazy-object-proxy in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.9.0)
+Requirement already satisfied: python-slugify>=5.0 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (8.0.1)
+Requirement already satisfied: apache-airflow-providers-http in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (4.5.2)
+Requirement already satisfied: flask-wtf>=0.15 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (1.1.1)
+Requirement already satisfied: apache-airflow-providers-sqlite in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (3.4.3)
+Requirement already satisfied: markupsafe>=1.1.1 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow) (2.1.3)
+Requirement already satisfied: email-validator<2,>=1.0.5 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (1.3.1)
+Requirement already satisfied: Flask-Babel<3,>=1 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (2.0.0)
+Requirement already satisfied: click<9,>=8 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (8.1.7)
+Requirement already satisfied: colorama<1,>=0.3.9 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (0.4.6)
+Requirement already satisfied: Flask-Limiter<4,>3 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (3.5.0)
+Requirement already satisfied: prison<1.0.0,>=0.2.1 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (0.2.1)
+Requirement already satisfied: sqlalchemy-utils<1,>=0.32.21 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (0.41.1)
+Requirement already satisfied: WTForms<4 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (3.0.1)
+Requirement already satisfied: Flask-JWT-Extended<5.0.0,>=4.0.0 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (4.5.2)
+Requirement already satisfied: marshmallow-sqlalchemy<0.27.0,>=0.22.0 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (0.26.1)
+Requirement already satisfied: Flask-SQLAlchemy<3,>=2.4 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (2.5.1)
+Requirement already satisfied: marshmallow<4,>=3.18.0 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (3.20.1)
+Requirement already satisfied: apispec[yaml]<7,>=6.0.0 in ./airflow-env/lib/python3.9/site-packages (from flask-appbuilder==4.3.6->apache-airflow) (6.3.0)
+Requirement already satisfied: Mako in ./airflow-env/lib/python3.9/site-packages (from alembic<2.0,>=1.6.3->apache-airflow) (1.2.4)
+Requirement already satisfied: exceptiongroup in ./airflow-env/lib/python3.9/site-packages (from cattrs>=22.1.0->apache-airflow) (1.1.3)
+Requirement already satisfied: requests<3,>=2.9.1 in ./airflow-env/lib/python3.9/site-packages (from connexion[flask]>=2.10.0->apache-airflow) (2.31.0)
+Requirement already satisfied: clickclick<21,>=1.2 in ./airflow-env/lib/python3.9/site-packages (from connexion[flask]>=2.10.0->apache-airflow) (20.10.2)
+Requirement already satisfied: PyYAML<7,>=5.1 in ./airflow-env/lib/python3.9/site-packages (from connexion[flask]>=2.10.0->apache-airflow) (6.0.1)
+Requirement already satisfied: inflection<0.6,>=0.3.1 in ./airflow-env/lib/python3.9/site-packages (from connexion[flask]>=2.10.0->apache-airflow) (0.5.1)
+Requirement already satisfied: cffi>=1.12 in ./airflow-env/lib/python3.9/site-packages (from cryptography>=0.9.3->apache-airflow) (1.15.1)
+Requirement already satisfied: wrapt<2,>=1.10 in ./airflow-env/lib/python3.9/site-packages (from deprecated>=1.2.13->apache-airflow) (1.15.0)
+Requirement already satisfied: importlib-metadata>=3.6.0 in ./airflow-env/lib/python3.9/site-packages (from flask<2.3,>=2.2->apache-airflow) (6.8.0)
+Requirement already satisfied: cachelib<0.10.0,>=0.9.0 in ./airflow-env/lib/python3.9/site-packages (from flask-caching>=1.5.0->apache-airflow) (0.9.0)
+Requirement already satisfied: referencing>=0.28.4 in ./airflow-env/lib/python3.9/site-packages (from jsonschema>=4.18.0->apache-airflow) (0.30.2)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./airflow-env/lib/python3.9/site-packages (from jsonschema>=4.18.0->apache-airflow) (2023.7.1)
+Requirement already satisfied: rpds-py>=0.7.1 in ./airflow-env/lib/python3.9/site-packages (from jsonschema>=4.18.0->apache-airflow) (0.10.3)
+Requirement already satisfied: uc-micro-py in ./airflow-env/lib/python3.9/site-packages (from linkify-it-py>=2.0.0->apache-airflow) (1.0.2)
+Requirement already satisfied: mdurl~=0.1 in ./airflow-env/lib/python3.9/site-packages (from markdown-it-py>=2.1.0->apache-airflow) (0.1.2)
+Requirement already satisfied: pytzdata>=2020.1 in ./airflow-env/lib/python3.9/site-packages (from pendulum>=2.0->apache-airflow) (2020.1)
+Requirement already satisfied: annotated-types>=0.4.0 in ./airflow-env/lib/python3.9/site-packages (from pydantic>=1.10.0->apache-airflow) (0.5.0)
+Requirement already satisfied: pydantic-core==2.6.3 in ./airflow-env/lib/python3.9/site-packages (from pydantic>=1.10.0->apache-airflow) (2.6.3)
+Requirement already satisfied: docutils in ./airflow-env/lib/python3.9/site-packages (from python-daemon>=3.0.0->apache-airflow) (0.20.1)
+Requirement already satisfied: setuptools>=62.4.0 in ./airflow-env/lib/python3.9/site-packages (from python-daemon>=3.0.0->apache-airflow) (68.2.2)
+Requirement already satisfied: six>=1.5 in ./airflow-env/lib/python3.9/site-packages (from python-dateutil>=2.3->apache-airflow) (1.16.0)
+Requirement already satisfied: text-unidecode>=1.3 in ./airflow-env/lib/python3.9/site-packages (from python-slugify>=5.0->apache-airflow) (1.3)
+Requirement already satisfied: greenlet!=0.4.17 in ./airflow-env/lib/python3.9/site-packages (from sqlalchemy<2.0,>=1.4.24->apache-airflow) (2.0.2)
+Requirement already satisfied: sqlparse>=0.4.2 in ./airflow-env/lib/python3.9/site-packages (from apache-airflow-providers-common-sql->apache-airflow) (0.4.4)
+Requirement already satisfied: aiohttp in ./airflow-env/lib/python3.9/site-packages (from apache-airflow-providers-http->apache-airflow) (3.8.5)
+Requirement already satisfied: requests-toolbelt in ./airflow-env/lib/python3.9/site-packages (from apache-airflow-providers-http->apache-airflow) (1.0.0)
+Requirement already satisfied: certifi in ./airflow-env/lib/python3.9/site-packages (from httpx->apache-airflow) (2023.7.22)
+Requirement already satisfied: httpcore<0.19.0,>=0.18.0 in ./airflow-env/lib/python3.9/site-packages (from httpx->apache-airflow) (0.18.0)
+Requirement already satisfied: sniffio in ./airflow-env/lib/python3.9/site-packages (from httpx->apache-airflow) (1.3.0)
+Requirement already satisfied: idna in ./airflow-env/lib/python3.9/site-packages (from httpx->apache-airflow) (3.4)
+Requirement already satisfied: opentelemetry-exporter-otlp-proto-http==1.20.0 in ./airflow-env/lib/python3.9/site-packages (from opentelemetry-exporter-otlp->apache-airflow) (1.20.0)
+Requirement already satisfied: opentelemetry-exporter-otlp-proto-grpc==1.20.0 in ./airflow-env/lib/python3.9/site-packages (from opentelemetry-exporter-otlp->apache-airflow) (1.20.0)
+Requirement already satisfied: opentelemetry-sdk~=1.20.0 in ./airflow-env/lib/python3.9/site-packages (from opentelemetry-exporter-otlp-proto-grpc==1.20.0->opentelemetry-exporter-otlp->apache-airflow) (1.20.0)
+Requirement already satisfied: googleapis-common-protos~=1.52 in ./airflow-env/lib/python3.9/site-packages (from opentelemetry-exporter-otlp-proto-grpc==1.20.0->opentelemetry-exporter-otlp->apache-airflow) (1.60.0)
+Requirement already satisfied: opentelemetry-proto==1.20.0 in ./airflow-env/lib/python3.9/site-packages (from opentelemetry-exporter-otlp-proto-grpc==1.20.0->opentelemetry-exporter-otlp->apache-airflow) (1.20.0)
+Requirement already satisfied: grpcio<2.0.0,>=1.0.0 in ./airflow-env/lib/python3.9/site-packages (from opentelemetry-exporter-otlp-proto-grpc==1.20.0->opentelemetry-exporter-otlp->apache-airflow) (1.58.0)
+Requirement already satisfied: opentelemetry-exporter-otlp-proto-common==1.20.0 in ./airflow-env/lib/python3.9/site-packages (from opentelemetry-exporter-otlp-proto-grpc==1.20.0->opentelemetry-exporter-otlp->apache-airflow) (1.20.0)
+Requirement already satisfied: backoff<3.0.0,>=1.10.0 in ./airflow-env/lib/python3.9/site-packages (from opentelemetry-exporter-otlp-proto-grpc==1.20.0->opentelemetry-exporter-otlp->apache-airflow) (2.2.1)
+Requirement already satisfied: protobuf<5.0,>=3.19 in ./airflow-env/lib/python3.9/site-packages (from opentelemetry-proto==1.20.0->opentelemetry-exporter-otlp-proto-grpc==1.20.0->opentelemetry-exporter-otlp->apache-airflow) (4.24.3)
+Requirement already satisfied: pycparser in ./airflow-env/lib/python3.9/site-packages (from cffi>=1.12->cryptography>=0.9.3->apache-airflow) (2.21)
+Requirement already satisfied: dnspython>=1.15.0 in ./airflow-env/lib/python3.9/site-packages (from email-validator<2,>=1.0.5->flask-appbuilder==4.3.6->apache-airflow) (2.4.2)
+Requirement already satisfied: pytz in ./airflow-env/lib/python3.9/site-packages (from Flask-Babel<3,>=1->flask-appbuilder==4.3.6->apache-airflow) (2023.3.post1)
+Requirement already satisfied: Babel>=2.3 in ./airflow-env/lib/python3.9/site-packages (from Flask-Babel<3,>=1->flask-appbuilder==4.3.6->apache-airflow) (2.12.1)
+Requirement already satisfied: ordered-set<5,>4 in ./airflow-env/lib/python3.9/site-packages (from Flask-Limiter<4,>3->flask-appbuilder==4.3.6->apache-airflow) (4.1.0)
+Requirement already satisfied: limits>=2.8 in ./airflow-env/lib/python3.9/site-packages (from Flask-Limiter<4,>3->flask-appbuilder==4.3.6->apache-airflow) (3.6.0)
+Requirement already satisfied: h11<0.15,>=0.13 in ./airflow-env/lib/python3.9/site-packages (from httpcore<0.19.0,>=0.18.0->httpx->apache-airflow) (0.14.0)
+Requirement already satisfied: anyio<5.0,>=3.0 in ./airflow-env/lib/python3.9/site-packages (from httpcore<0.19.0,>=0.18.0->httpx->apache-airflow) (4.0.0)
+Requirement already satisfied: zipp>=0.5 in ./airflow-env/lib/python3.9/site-packages (from importlib-metadata>=3.6.0->flask<2.3,>=2.2->apache-airflow) (3.17.0)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./airflow-env/lib/python3.9/site-packages (from requests<3,>=2.9.1->connexion[flask]>=2.10.0->apache-airflow) (2.0.5)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./airflow-env/lib/python3.9/site-packages (from requests<3,>=2.9.1->connexion[flask]>=2.10.0->apache-airflow) (3.2.0)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in ./airflow-env/lib/python3.9/site-packages (from aiohttp->apache-airflow-providers-http->apache-airflow) (4.0.3)
+Requirement already satisfied: aiosignal>=1.1.2 in ./airflow-env/lib/python3.9/site-packages (from aiohttp->apache-airflow-providers-http->apache-airflow) (1.3.1)
+Requirement already satisfied: multidict<7.0,>=4.5 in ./airflow-env/lib/python3.9/site-packages (from aiohttp->apache-airflow-providers-http->apache-airflow) (6.0.4)
+Requirement already satisfied: yarl<2.0,>=1.0 in ./airflow-env/lib/python3.9/site-packages (from aiohttp->apache-airflow-providers-http->apache-airflow) (1.9.2)
+Requirement already satisfied: frozenlist>=1.1.1 in ./airflow-env/lib/python3.9/site-packages (from aiohttp->apache-airflow-providers-http->apache-airflow) (1.4.0)
+Requirement already satisfied: importlib-resources>=1.3 in ./airflow-env/lib/python3.9/site-packages (from limits>=2.8->Flask-Limiter<4,>3->flask-appbuilder==4.3.6->apache-airflow) (6.1.0)
+Requirement already satisfied: opentelemetry-semantic-conventions==0.41b0 in ./airflow-env/lib/python3.9/site-packages (from opentelemetry-sdk~=1.20.0->opentelemetry-exporter-otlp-proto-grpc==1.20.0->opentelemetry-exporter-otlp->apache-airflow) (0.41b0)
+WARNING: You are using pip version 21.3.1; however, version 23.2.1 is available.
+You should consider upgrading via the '/root/airflow-env/bin/python3 -m pip install --upgrade pip' command.
+(airflow-env) [root@ip-172-31-27-44 ~]# airflow
+Usage: airflow [-h] GROUP_OR_COMMAND ...
+
+Positional Arguments:
+  GROUP_OR_COMMAND
+    
+    Groups:
+      config         View configuration
+      connections    Manage connections
+      dags           Manage DAGs
+      db             Database operations
+      jobs           Manage jobs
+      pools          Manage pools
+      providers      Display providers
+      roles          Manage roles
+      tasks          Manage tasks
+      users          Manage users
+      variables      Manage variables
+    
+    Commands:
+      cheat-sheet    Display cheat sheet
+      dag-processor  Start a standalone Dag Processor instance
+      info           Show information about current Airflow and environment
+      kerberos       Start a kerberos ticket renewer
+      plugins        Dump information about loaded plugins
+      rotate-fernet-key
+                     Rotate encrypted connection credentials and variables
+      scheduler      Start a scheduler instance
+      standalone     Run an all-in-one copy of Airflow
+      sync-perm      Update permissions for existing roles and optionally DAGs
+      triggerer      Start a triggerer instance
+      version        Show the version
+      webserver      Start a Airflow webserver instance
+
+Optional Arguments:
+  -h, --help         show this help message and exit
+
+airflow command error: the following arguments are required: GROUP_OR_COMMAND, see help above.
+(airflow-env) [root@ip-172-31-27-44 ~]# airflow standalone
+standalone | Starting Airflow Standalone
+standalone | Checking database is initialized
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+WARNI [unusual_prefix_e91a252193567a75c43ab96e60e1188e09faee15_example_kubernetes_executor] The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+WARNI [unusual_prefix_6d0b22c0de1ffa845dbeec5c41f383fb7677573e_example_local_kubernetes_executor] Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/root/airflow-env/lib64/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+WARNI [unusual_prefix_6d0b22c0de1ffa845dbeec5c41f383fb7677573e_example_local_kubernetes_executor] Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+WARNI [unusual_prefix_6391c25e8affa7fc51f7a2051cccddc7c69c5420_example_python_operator] The virtalenv_python example task requires virtualenv, please install it.
+WARNI [unusual_prefix_0e53cfe1372e7c058d4a746b986d4f793e4c1a8e_tutorial_taskflow_api_virtualenv] The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.
+WARNI [unusual_prefix_ef0cdcd3b795a87f780874fc9dfb01c8d150bce9_workday] Could not import pandas. Holidays will not be considered.
+WARNI [airflow.models.crypto] empty cryptography key - values will not be stored encrypted.
+standalone | Database ready
+/root/airflow-env/lib64/python3.9/site-packages/flask_limiter/extension.py:336 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+ scheduler | ____________       _____________
+ scheduler | ____    |__( )_________  __/__  /________      __
+ scheduler | ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+ scheduler | ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ scheduler | _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+ scheduler | [2023-09-24T11:46:43.403+0000] {executor_loader.py:117} INFO - Loaded executor: SequentialExecutor
+ triggerer | ____________       _____________
+ triggerer | ____    |__( )_________  __/__  /________      __
+ triggerer | ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+ triggerer | ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ triggerer | _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+ triggerer | [2023-09-24T11:46:43.453+0000] {triggerer_job_runner.py:171} INFO - Setting up TriggererHandlerWrapper with handler <FileTaskHandler (NOTSET)>
+ triggerer | [2023-09-24T11:46:43.463+0000] {triggerer_job_runner.py:227} INFO - Setting up logging queue listener with handlers [<RedirectStdHandler <stdout> (NOTSET)>, <TriggererHandlerWrapper (NOTSET)>]
+ scheduler | [2023-09-24 11:46:43 +0000] [28604] [INFO] Starting gunicorn 21.2.0
+ scheduler | [2023-09-24 11:46:43 +0000] [28604] [INFO] Listening at: http://[::]:8793 (28604)
+ scheduler | [2023-09-24 11:46:43 +0000] [28604] [INFO] Using worker: sync
+ scheduler | [2023-09-24 11:46:43 +0000] [28607] [INFO] Booting worker with pid: 28607
+ scheduler | [2023-09-24T11:46:43.529+0000] {scheduler_job_runner.py:798} INFO - Starting the scheduler
+ triggerer | [2023-09-24 11:46:43 +0000] [28606] [INFO] Starting gunicorn 21.2.0
+ triggerer | [2023-09-24T11:46:43.539+0000] {triggerer_job_runner.py:324} INFO - Starting the triggerer
+ triggerer | [2023-09-24 11:46:43 +0000] [28606] [INFO] Listening at: http://[::]:8794 (28606)
+ triggerer | [2023-09-24 11:46:43 +0000] [28606] [INFO] Using worker: sync
+ scheduler | [2023-09-24 11:46:43 +0000] [28609] [INFO] Booting worker with pid: 28609
+ triggerer | [2023-09-24 11:46:43 +0000] [28610] [INFO] Booting worker with pid: 28610
+ scheduler | [2023-09-24T11:46:43.563+0000] {scheduler_job_runner.py:805} INFO - Processing each file at most -1 times
+ scheduler | [2023-09-24T11:46:43.584+0000] {manager.py:166} INFO - Launched DagFileProcessorManager with pid: 28611
+ scheduler | [2023-09-24T11:46:43.601+0000] {scheduler_job_runner.py:1586} INFO - Adopting or resetting orphaned tasks for active dag runs
+ triggerer | [2023-09-24 11:46:43 +0000] [28612] [INFO] Booting worker with pid: 28612
+ scheduler | [2023-09-24T11:46:43.621+0000] {settings.py:60} INFO - Configured default timezone Timezone('UTC')
+ scheduler | [2023-09-24T11:46:43.720+0000] {manager.py:410} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+ webserver | /root/airflow-env/lib64/python3.9/site-packages/flask_limiter/extension.py:336 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+ webserver | [2023-09-24 11:46:47 +0000] [28603] [INFO] Starting gunicorn 21.2.0
+ webserver | [2023-09-24 11:46:48 +0000] [28603] [INFO] Listening at: http://0.0.0.0:8080 (28603)
+ webserver | [2023-09-24 11:46:48 +0000] [28603] [INFO] Using worker: sync
+ webserver | [2023-09-24 11:46:48 +0000] [28619] [INFO] Booting worker with pid: 28619
+ webserver | [2023-09-24 11:46:48 +0000] [28620] [INFO] Booting worker with pid: 28620
+ webserver | [2023-09-24 11:46:48 +0000] [28621] [INFO] Booting worker with pid: 28621
+ webserver | [2023-09-24 11:46:48 +0000] [28622] [INFO] Booting worker with pid: 28622
+standalone | 
+standalone | Airflow is ready
+standalone | Login with username: admin  password: 37c65hSCmVw2PwdA
+standalone | Airflow Standalone is for development purposes only. Do not use this in production!
+standalone | 
+ triggerer | [2023-09-24T11:47:43.623+0000] {triggerer_job_runner.py:474} INFO - 0 triggers currently running
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:48:36 +0000] "GET / HTTP/1.1" 302 197 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:48:36 +0000] "GET /home HTTP/1.1" 302 201 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:48:37 +0000] "GET /login/ HTTP/1.1" 200 17929 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:48:41 +0000] "GET /static/appbuilder/css/fontawesome/solid.min.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:48:41 +0000] "GET /static/appbuilder/css/fontawesome/v4-shims.min.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:48:41 +0000] "GET /static/appbuilder/css/fontawesome/brands.min.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:48:41 +0000] "GET /static/appbuilder/css/fontawesome/regular.min.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:48:46 +0000] "GET /static/appbuilder/css/fontawesome/fontawesome.min.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:48:47 +0000] "GET /static/appbuilder/css/bootstrap.min.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | [2023-09-24 11:50:53 +0000] [28603] [CRITICAL] WORKER TIMEOUT (pid:28620)
+ triggerer | [2023-09-24T11:48:50.299+0000] {triggerer_job_runner.py:573} INFO - Triggerer's async thread was blocked for 8.13 seconds, likely by a badly-written trigger. Set PYTHONASYNCIODEBUG=1 to get more information on overrunning coroutines.
+ webserver | [2023-09-24 11:50:53 +0000] [28603] [CRITICAL] WORKER TIMEOUT (pid:28621)
+ webserver | [2023-09-24 11:50:53 +0000] [28603] [CRITICAL] WORKER TIMEOUT (pid:28622)
+ webserver | [2023-09-24 11:50:56 +0000] [28603] [CRITICAL] WORKER TIMEOUT (pid:28619)
+ webserver | [2023-09-24 11:50:56 +0000] [28603] [ERROR] Worker (pid:28620) was sent SIGKILL! Perhaps out of memory?
+ triggerer | [2023-09-24T11:49:24.004+0000] {triggerer_job_runner.py:474} INFO - 0 triggers currently running
+ webserver | [2023-09-24 11:50:56 +0000] [28603] [ERROR] Worker (pid:28621) was sent SIGKILL! Perhaps out of memory?
+ webserver | [2023-09-24 11:50:56 +0000] [28603] [ERROR] Worker (pid:28622) was sent SIGKILL! Perhaps out of memory?
+ webserver | [2023-09-24 11:50:56 +0000] [28603] [ERROR] Worker (pid:28619) was sent SIGKILL! Perhaps out of memory?
+ webserver | [2023-09-24 11:50:56 +0000] [28755] [INFO] Booting worker with pid: 28755
+ triggerer | [2023-09-24T11:50:56.390+0000] {triggerer_job_runner.py:573} INFO - Triggerer's async thread was blocked for 125.77 seconds, likely by a badly-written trigger. Set PYTHONASYNCIODEBUG=1 to get more information on overrunning coroutines.
+ webserver | [2023-09-24 11:50:56 +0000] [28756] [INFO] Booting worker with pid: 28756
+ webserver | [2023-09-24 11:50:56 +0000] [28757] [INFO] Booting worker with pid: 28757
+ webserver | [2023-09-24 11:50:56 +0000] [28758] [INFO] Booting worker with pid: 28758
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:56 +0000] "GET /static/appbuilder/css/ab.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:56 +0000] "GET /static/dist/main.795f05be1714e3254570.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:56 +0000] "GET /static/dist/bootstrap-datetimepicker.min.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:56 +0000] "GET /static/dist/loadingDots.84963375c34df3f17aab.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:57 +0000] "GET /static/dist/airflowDefaultTheme.c93fb34380b84747e945.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:57 +0000] "GET /static/dist/flash.39f43f5a4fffad4cd720.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:57 +0000] "GET /static/dist/materialIcons.ce0f77d10d4dc51f5f07.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:57 +0000] "GET / HTTP/1.1" 302 197 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:57 +0000] "GET /static/appbuilder/js/ab_filters.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:57 +0000] "GET /static/appbuilder/js/ab_actions.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:57 +0000] "GET /home HTTP/1.1" 302 201 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:57 +0000] "GET /static/appbuilder/js/bootstrap.min.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:50:57 +0000] "GET /static/appbuilder/datepicker/bootstrap-datepicker.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:51:02 +0000] "GET /static/appbuilder/js/jquery-latest.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:51:02 +0000] "GET /static/appbuilder/select2/select2.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ triggerer | [2023-09-24T11:51:02.112+0000] {triggerer_job_runner.py:573} INFO - Triggerer's async thread was blocked for 4.00 seconds, likely by a badly-written trigger. Set PYTHONASYNCIODEBUG=1 to get more information on overrunning coroutines.
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:51:02 +0000] "GET /static/appbuilder/js/ab.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ triggerer | [2023-09-24T11:51:02.751+0000] {triggerer_job_runner.py:573} INFO - Triggerer's async thread was blocked for 0.53 seconds, likely by a badly-written trigger. Set PYTHONASYNCIODEBUG=1 to get more information on overrunning coroutines.
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:51:10 +0000] "GET /static/dist/moment.0fcb6b41ff6a87cf079e.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:51:06 +0000] "GET /static/appbuilder/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/static/appbuilder/css/fontawesome/solid.min.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ webserver | 49.15.228.87 - - [24/Sep/2023:11:51:32 +0000] "GET /static/dist/main.795f05be1714e3254570.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+ triggerer | [2023-09-24T11:51:10.112+0000] {triggerer_job_runner.py:573} INFO - Triggerer's async thread was blocked for 6.22 seconds, likely by a badly-written trigger. Set PYTHONASYNCIODEBUG=1 to get more information on overrunning coroutines.
+^Cstandalone | Shutting down components
+^CTraceback (most recent call last):
+  File "/root/airflow-env/bin/airflow", line 8, in <module>
+    sys.exit(main())
+  File "/root/airflow-env/lib64/python3.9/site-packages/airflow/__main__.py", line 59, in main
+    args.func(args)
+  File "/root/airflow-env/lib64/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/root/airflow-env/lib64/python3.9/site-packages/airflow/cli/commands/standalone_command.py", line 51, in entrypoint
+    StandaloneCommand().run()
+  File "/root/airflow-env/lib64/python3.9/site-packages/airflow/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/root/airflow-env/lib64/python3.9/site-packages/airflow/cli/commands/standalone_command.py", line 118, in run
+    command.join()
+  File "/usr/lib64/python3.9/threading.py", line 1060, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib64/python3.9/threading.py", line 1080, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+KeyboardInterrupt
+
+(airflow-env) [root@ip-172-31-27-44 ~]# sudo yum update -y
+Last metadata expiration check: 1:03:00 ago on Sun Sep 24 10:52:35 2023.
+Dependencies resolved.
+Nothing to do.
+Complete!
+(airflow-env) [root@ip-172-31-27-44 ~]# sudo yum update -y
+Last metadata expiration check: 1:03:15 ago on Sun Sep 24 10:52:35 2023.
+Dependencies resolved.
+Nothing to do.
+Complete!
+(airflow-env) [root@ip-172-31-27-44 ~]# sudo yum install -y gcc-c++ cyrus-sasl-devel python3 python3-pip
+Last metadata expiration check: 1:03:27 ago on Sun Sep 24 10:52:35 2023.
+Package python3-3.9.16-1.amzn2023.0.6.x86_64 is already installed.
+Dependencies resolved.
+============================================================================================================================================
+ Package                              Architecture             Version                                  Repository                     Size
+============================================================================================================================================
+Installing:
+ cyrus-sasl-devel                     x86_64                   2.1.27-18.amzn2023.0.3                   amazonlinux                   103 k
+ gcc-c++                              x86_64                   11.4.1-2.amzn2023.0.2                    amazonlinux                    12 M
+ python3-pip                          noarch                   21.3.1-2.amzn2023.0.5                    amazonlinux                   1.8 M
+Installing dependencies:
+ annobin-docs                         noarch                   10.93-1.amzn2023.0.1                     amazonlinux                    92 k
+ annobin-plugin-gcc                   x86_64                   10.93-1.amzn2023.0.1                     amazonlinux                   887 k
+ cpp                                  x86_64                   11.4.1-2.amzn2023.0.2                    amazonlinux                    10 M
+ cyrus-sasl                           x86_64                   2.1.27-18.amzn2023.0.3                   amazonlinux                    73 k
+ gc                                   x86_64                   8.0.4-5.amzn2023.0.2                     amazonlinux                   105 k
+ gcc                                  x86_64                   11.4.1-2.amzn2023.0.2                    amazonlinux                    32 M
+ glibc-devel                          x86_64                   2.34-52.amzn2023.0.5                     amazonlinux                    48 k
+ glibc-headers-x86                    noarch                   2.34-52.amzn2023.0.5                     amazonlinux                   448 k
+ guile22                              x86_64                   2.2.7-2.amzn2023.0.3                     amazonlinux                   6.4 M
+ kernel-headers                       x86_64                   6.1.52-71.125.amzn2023                   amazonlinux                   1.4 M
+ libmpc                               x86_64                   1.2.1-2.amzn2023.0.2                     amazonlinux                    62 k
+ libstdc++-devel                      x86_64                   11.4.1-2.amzn2023.0.2                    amazonlinux                   2.2 M
+ libtool-ltdl                         x86_64                   2.4.7-1.amzn2023.0.3                     amazonlinux                    38 k
+ libxcrypt-devel                      x86_64                   4.4.33-7.amzn2023                        amazonlinux                    32 k
+ make                                 x86_64                   1:4.3-5.amzn2023.0.2                     amazonlinux                   534 k
+Installing weak dependencies:
+ libxcrypt-compat                     x86_64                   4.4.33-7.amzn2023                        amazonlinux                    92 k
+
+Transaction Summary
+============================================================================================================================================
+Install  19 Packages
+
+Total download size: 69 M
+Installed size: 222 M
+Downloading Packages:
+(1/19): annobin-plugin-gcc-10.93-1.amzn2023.0.1.x86_64.rpm                                                  7.3 MB/s | 887 kB     00:00    
+(2/19): libxcrypt-compat-4.4.33-7.amzn2023.x86_64.rpm                                                       2.3 MB/s |  92 kB     00:00    
+(3/19): libmpc-1.2.1-2.amzn2023.0.2.x86_64.rpm                                                              2.8 MB/s |  62 kB     00:00    
+(4/19): libstdc++-devel-11.4.1-2.amzn2023.0.2.x86_64.rpm                                                    9.8 MB/s | 2.2 MB     00:00    
+(5/19): libxcrypt-devel-4.4.33-7.amzn2023.x86_64.rpm                                                        668 kB/s |  32 kB     00:00    
+(6/19): cpp-11.4.1-2.amzn2023.0.2.x86_64.rpm                                                                 33 MB/s |  10 MB     00:00    
+(7/19): libtool-ltdl-2.4.7-1.amzn2023.0.3.x86_64.rpm                                                        501 kB/s |  38 kB     00:00    
+(8/19): glibc-devel-2.34-52.amzn2023.0.5.x86_64.rpm                                                         1.3 MB/s |  48 kB     00:00    
+(9/19): gc-8.0.4-5.amzn2023.0.2.x86_64.rpm                                                                  2.0 MB/s | 105 kB     00:00    
+(10/19): kernel-headers-6.1.52-71.125.amzn2023.x86_64.rpm                                                    17 MB/s | 1.4 MB     00:00    
+(11/19): cyrus-sasl-devel-2.1.27-18.amzn2023.0.3.x86_64.rpm                                                 1.6 MB/s | 103 kB     00:00    
+(12/19): cyrus-sasl-2.1.27-18.amzn2023.0.3.x86_64.rpm                                                       732 kB/s |  73 kB     00:00    
+(13/19): gcc-c++-11.4.1-2.amzn2023.0.2.x86_64.rpm                                                            37 MB/s |  12 MB     00:00    
+(14/19): make-4.3-5.amzn2023.0.2.x86_64.rpm                                                                 6.4 MB/s | 534 kB     00:00    
+(15/19): guile22-2.2.7-2.amzn2023.0.3.x86_64.rpm                                                             26 MB/s | 6.4 MB     00:00    
+(16/19): python3-pip-21.3.1-2.amzn2023.0.5.noarch.rpm                                                        19 MB/s | 1.8 MB     00:00    
+(17/19): glibc-headers-x86-2.34-52.amzn2023.0.5.noarch.rpm                                                  7.4 MB/s | 448 kB     00:00    
+(18/19): annobin-docs-10.93-1.amzn2023.0.1.noarch.rpm                                                       1.5 MB/s |  92 kB     00:00    
+(19/19): gcc-11.4.1-2.amzn2023.0.2.x86_64.rpm                                                                35 MB/s |  32 MB     00:00    
+--------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                        57 MB/s |  69 MB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                    1/1 
+  Installing       : libmpc-1.2.1-2.amzn2023.0.2.x86_64                                                                                1/19 
+  Installing       : cpp-11.4.1-2.amzn2023.0.2.x86_64                                                                                  2/19 
+  Installing       : annobin-docs-10.93-1.amzn2023.0.1.noarch                                                                          3/19 
+  Installing       : glibc-headers-x86-2.34-52.amzn2023.0.5.noarch                                                                     4/19 
+  Running scriptlet: cyrus-sasl-2.1.27-18.amzn2023.0.3.x86_64                                                                          5/19 
+  Installing       : cyrus-sasl-2.1.27-18.amzn2023.0.3.x86_64                                                                          5/19 
+  Running scriptlet: cyrus-sasl-2.1.27-18.amzn2023.0.3.x86_64                                                                          5/19 
+  Installing       : kernel-headers-6.1.52-71.125.amzn2023.x86_64                                                                      6/19 
+  Installing       : glibc-devel-2.34-52.amzn2023.0.5.x86_64                                                                           7/19 
+  Installing       : libxcrypt-devel-4.4.33-7.amzn2023.x86_64                                                                          8/19 
+  Installing       : gc-8.0.4-5.amzn2023.0.2.x86_64                                                                                    9/19 
+  Installing       : libtool-ltdl-2.4.7-1.amzn2023.0.3.x86_64                                                                         10/19 
+  Installing       : guile22-2.2.7-2.amzn2023.0.3.x86_64                                                                              11/19 
+  Installing       : make-1:4.3-5.amzn2023.0.2.x86_64                                                                                 12/19 
+  Installing       : gcc-11.4.1-2.amzn2023.0.2.x86_64                                                                                 13/19 
+  Running scriptlet: gcc-11.4.1-2.amzn2023.0.2.x86_64                                                                                 13/19 
+  Installing       : libxcrypt-compat-4.4.33-7.amzn2023.x86_64                                                                        14/19 
+  Installing       : libstdc++-devel-11.4.1-2.amzn2023.0.2.x86_64                                                                     15/19 
+  Installing       : gcc-c++-11.4.1-2.amzn2023.0.2.x86_64                                                                             16/19 
+  Installing       : python3-pip-21.3.1-2.amzn2023.0.5.noarch                                                                         17/19 
+  Installing       : annobin-plugin-gcc-10.93-1.amzn2023.0.1.x86_64                                                                   18/19 
+  Running scriptlet: annobin-plugin-gcc-10.93-1.amzn2023.0.1.x86_64                                                                   18/19 
+  Installing       : cyrus-sasl-devel-2.1.27-18.amzn2023.0.3.x86_64                                                                   19/19 
+  Running scriptlet: cyrus-sasl-devel-2.1.27-18.amzn2023.0.3.x86_64                                                                   19/19 
+  Verifying        : cpp-11.4.1-2.amzn2023.0.2.x86_64                                                                                  1/19 
+  Verifying        : annobin-plugin-gcc-10.93-1.amzn2023.0.1.x86_64                                                                    2/19 
+  Verifying        : libstdc++-devel-11.4.1-2.amzn2023.0.2.x86_64                                                                      3/19 
+  Verifying        : libxcrypt-compat-4.4.33-7.amzn2023.x86_64                                                                         4/19 
+  Verifying        : libmpc-1.2.1-2.amzn2023.0.2.x86_64                                                                                5/19 
+  Verifying        : libxcrypt-devel-4.4.33-7.amzn2023.x86_64                                                                          6/19 
+  Verifying        : gcc-11.4.1-2.amzn2023.0.2.x86_64                                                                                  7/19 
+  Verifying        : libtool-ltdl-2.4.7-1.amzn2023.0.3.x86_64                                                                          8/19 
+  Verifying        : glibc-devel-2.34-52.amzn2023.0.5.x86_64                                                                           9/19 
+  Verifying        : gc-8.0.4-5.amzn2023.0.2.x86_64                                                                                   10/19 
+  Verifying        : kernel-headers-6.1.52-71.125.amzn2023.x86_64                                                                     11/19 
+  Verifying        : gcc-c++-11.4.1-2.amzn2023.0.2.x86_64                                                                             12/19 
+  Verifying        : cyrus-sasl-devel-2.1.27-18.amzn2023.0.3.x86_64                                                                   13/19 
+  Verifying        : cyrus-sasl-2.1.27-18.amzn2023.0.3.x86_64                                                                         14/19 
+  Verifying        : guile22-2.2.7-2.amzn2023.0.3.x86_64                                                                              15/19 
+  Verifying        : make-1:4.3-5.amzn2023.0.2.x86_64                                                                                 16/19 
+  Verifying        : python3-pip-21.3.1-2.amzn2023.0.5.noarch                                                                         17/19 
+  Verifying        : glibc-headers-x86-2.34-52.amzn2023.0.5.noarch                                                                    18/19 
+  Verifying        : annobin-docs-10.93-1.amzn2023.0.1.noarch                                                                         19/19 
+
+Installed:
+  annobin-docs-10.93-1.amzn2023.0.1.noarch      annobin-plugin-gcc-10.93-1.amzn2023.0.1.x86_64 cpp-11.4.1-2.amzn2023.0.2.x86_64            
+  cyrus-sasl-2.1.27-18.amzn2023.0.3.x86_64      cyrus-sasl-devel-2.1.27-18.amzn2023.0.3.x86_64 gc-8.0.4-5.amzn2023.0.2.x86_64              
+  gcc-11.4.1-2.amzn2023.0.2.x86_64              gcc-c++-11.4.1-2.amzn2023.0.2.x86_64           glibc-devel-2.34-52.amzn2023.0.5.x86_64     
+  glibc-headers-x86-2.34-52.amzn2023.0.5.noarch guile22-2.2.7-2.amzn2023.0.3.x86_64            kernel-headers-6.1.52-71.125.amzn2023.x86_64
+  libmpc-1.2.1-2.amzn2023.0.2.x86_64            libstdc++-devel-11.4.1-2.amzn2023.0.2.x86_64   libtool-ltdl-2.4.7-1.amzn2023.0.3.x86_64    
+  libxcrypt-compat-4.4.33-7.amzn2023.x86_64     libxcrypt-devel-4.4.33-7.amzn2023.x86_64       make-1:4.3-5.amzn2023.0.2.x86_64            
+  python3-pip-21.3.1-2.amzn2023.0.5.noarch     
+
+Complete!
+(airflow-env) [root@ip-172-31-27-44 ~]# airflow webserver --port 8080
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+Running the Gunicorn Server with:
+Workers: 4 sync
+Host: 0.0.0.0:8080
+Timeout: 120
+Logfiles: - -
+Access Logformat: 
+=================================================================
+/root/airflow-env/lib64/python3.9/site-packages/flask_limiter/extension.py:336 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+[2023-09-24 11:57:09 +0000] [29630] [INFO] Starting gunicorn 21.2.0
+[2023-09-24 11:57:09 +0000] [29630] [INFO] Listening at: http://0.0.0.0:8080 (29630)
+[2023-09-24 11:57:09 +0000] [29630] [INFO] Using worker: sync
+[2023-09-24 11:57:09 +0000] [29632] [INFO] Booting worker with pid: 29632
+[2023-09-24 11:57:09 +0000] [29633] [INFO] Booting worker with pid: 29633
+[2023-09-24 11:57:09 +0000] [29634] [INFO] Booting worker with pid: 29634
+[2023-09-24 11:57:09 +0000] [29635] [INFO] Booting worker with pid: 29635
+49.15.228.87 - - [24/Sep/2023:11:57:22 +0000] "GET / HTTP/1.1" 302 197 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:22 +0000] "GET /home HTTP/1.1" 302 201 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:22 +0000] "GET /login/ HTTP/1.1" 200 17941 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:23 +0000] "GET /static/appbuilder/css/bootstrap.min.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:23 +0000] "GET /static/appbuilder/datepicker/bootstrap-datepicker.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:23 +0000] "GET /static/appbuilder/select2/select2-bootstrap-theme.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:23 +0000] "GET /static/appbuilder/css/fontawesome/fontawesome.min.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:23 +0000] "GET /static/appbuilder/select2/select2.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:23 +0000] "GET /static/appbuilder/css/fontawesome/regular.min.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:23 +0000] "GET /static/appbuilder/css/flags/flags16.css HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:23 +0000] "GET /static/appbuilder/css/fontawesome/solid.min.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:23 +0000] "GET /static/appbuilder/css/fontawesome/brands.min.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:23 +0000] "GET /static/appbuilder/css/fontawesome/v4-shims.min.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/appbuilder/css/ab.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/dist/airflowDefaultTheme.c93fb34380b84747e945.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/dist/materialIcons.ce0f77d10d4dc51f5f07.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/dist/main.795f05be1714e3254570.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/dist/loadingDots.84963375c34df3f17aab.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/dist/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/dist/flash.39f43f5a4fffad4cd720.css HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/appbuilder/js/jquery-latest.js HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/appbuilder/js/ab_filters.js HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/appbuilder/js/bootstrap.min.js HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/appbuilder/js/ab_actions.js HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/appbuilder/datepicker/bootstrap-datepicker.js HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/appbuilder/select2/select2.js HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/dist/bootstrap-datetimepicker.min.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:24 +0000] "GET /static/dist/bootstrap3-typeahead.min.js HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:25 +0000] "GET /static/appbuilder/js/ab.js HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:25 +0000] "GET /static/appbuilder/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/static/appbuilder/css/fontawesome/solid.min.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:25 +0000] "GET /static/dist/main.795f05be1714e3254570.js HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:25 +0000] "GET /static/dist/moment.0fcb6b41ff6a87cf079e.js HTTP/1.1" 304 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+49.15.228.87 - - [24/Sep/2023:11:57:25 +0000] "GET /static/pin_32.png HTTP/1.1" 200 0 "http://ec2-52-62-19-2.ap-southeast-2.compute.amazonaws.com:8080/login/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+
+
+airflow schedular
+efault_args = {
+    'owner': 'your_name',
+    'start_date': datetime(2023, 1, 1),
+    'retries': 1,
+    'retry_delay': timedelta(minutes=5),
+}
+
+^C[2023-09-24 12:02:00 +0000] [29630] [INFO] Handling signal: int
+[2023-09-24T12:02:00.316+0000] {webserver_command.py:440} INFO - Received signal: 2. Closing gunicorn.
+[2023-09-24 12:02:00 +0000] [29633] [INFO] Worker exiting (pid: 29633)
+[2023-09-24 12:02:00 +0000] [29632] [INFO] Worker exiting (pid: 29632)
+[2023-09-24 12:02:00 +0000] [29634] [INFO] Worker exiting (pid: 29634)
+[2023-09-24 12:02:00 +0000] [29635] [INFO] Worker exiting (pid: 29635)
+[2023-09-24 12:02:02 +0000] [29630] [INFO] Shutt
