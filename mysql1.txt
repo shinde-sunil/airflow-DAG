@@ -1,0 +1,108 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-1025-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Sep 24 17:45:24 UTC 2023
+
+  System load:  0.001953125       Processes:             99
+  Usage of /:   30.1% of 7.57GB   Users logged in:       0
+  Memory usage: 61%               IPv4 address for eth0: 172.31.16.234
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+131 updates can be applied immediately.
+71 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Sun Sep 24 17:44:03 2023 from 13.239.158.5
+ubuntu@ip-172-31-16-234:~$ sudo apt update
+Hit:1 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:3 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Fetched 227 kB in 1s (299 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+127 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ubuntu@ip-172-31-16-234:~$ sudo apt install mysql-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+mysql-server is already the newest version (8.0.34-0ubuntu0.22.04.1).
+0 upgraded, 0 newly installed, 0 to remove and 127 not upgraded.
+ubuntu@ip-172-31-16-234:~$ ssh -i "Linux.pem.pem" ubuntu@ec2-3-27-42-114.ap-southeast-2.compute.amazonaws.com
+Warning: Identity file Linux.pem.pem not accessible: No such file or directory.
+The authenticity of host 'ec2-3-27-42-114.ap-southeast-2.compute.amazonaws.com (172.31.16.234)' can't be established.
+ED25519 key fingerprint is SHA256:Aq5P277yxbTbcfe1w8twHqgQcXZNKE4tHZnHi4Lk3/o.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'ec2-3-27-42-114.ap-southeast-2.compute.amazonaws.com' (ED25519) to the list of known hosts.
+ubuntu@ec2-3-27-42-114.ap-southeast-2.compute.amazonaws.com: Permission denied (publickey).
+ubuntu@ip-172-31-16-234:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+ubuntu@ip-172-31-16-234:~$ mysql123
+mysql123: command not found
+ubuntu@ip-172-31-16-234:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+ubuntu@ip-172-31-16-234:~$ Sunil8806@
+Sunil8806@: command not found
+ubuntu@ip-172-31-16-234:~$ mysql -u root -p
+Enter password: 
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+ubuntu@ip-172-31-16-234:~$ sudo mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 22
+Server version: 8.0.34-0ubuntu0.22.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> exits
+    -> exit
+    -> FROM mysql.user WHERE user 
+    -> FROM mysql.user WHERE user='root'\G
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'exits
+exit
+FROM mysql.user WHERE user 
+FROM mysql.user WHERE user='root'' at line 1
+mysql> 
+mysql> 
+mysql> 
+mysql> SELECT * FROM mysql.user='root'\G
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='root'' at line 1
+mysql> EXIT
+Bye
+ubuntu@ip-172-31-16-234:~$ sudo systemctl status mysql.service
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2023-09-24 17:16:03 UTC; 44min ago
+    Process: 3288 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+   Main PID: 3296 (mysqld)
+     Status: "Server is operational"
+      Tasks: 38 (limit: 1141)
+     Memory: 354.5M
+        CPU: 10.612s
+     CGroup: /system.slice/mysql.service
+             └─3296 /usr/sbin/mysqld
+
+Sep 24 17:16:01 ip-172-31-16-234 systemd[1]: Starting MySQL Community Server...
+Sep 24 17:16:03 ip-172-31-16-234 systemd[1]: Started MySQL Community Server.
+ubuntu@ip-172-31-16-234:~$ sudo systemctl start mysql.servic
